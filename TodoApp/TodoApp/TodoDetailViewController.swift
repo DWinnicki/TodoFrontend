@@ -14,31 +14,18 @@ class TodoDetailViewController: UIViewController {
     @IBOutlet weak var detailField: UITextField!
     @IBOutlet weak var doneSwitch: UISwitch!
     
-    var model = TodoModel()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
+        // Dispose of any resources that can be recreated.
     }
+    
 
-    @IBAction func save(_ sender: Any) {
-        let name = nameField.text
-        let detail = detailField.text
-        let done = doneSwitch.isOn
-        
-        model.name = name!
-        model.details = detail!
-        model.completed = done
-        
-        TodoManager.addTodo {(model) in
-            print(0)
-        }
-    }
     /*
     // MARK: - Navigation
 
